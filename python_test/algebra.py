@@ -1,3 +1,6 @@
+import re
+
+
 def addition(a, b) -> object:
     return a + b
 
@@ -27,5 +30,7 @@ def to_sentence_case(user_input):
 
 
 def to_camel_case(user_input):
-    user_input = to_sentence_case(user_input)
-    user_input.swapcase()
+    user_input = (re.sub(r"(_|-)+", "", user_input))
+    user_input = to_sentence_case(user_input).replace(" ", "")
+    return user_input.swapcase()
+

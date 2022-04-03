@@ -1,7 +1,7 @@
 import unittest
 
 from python_test.algebra import addition, subtraction, division, mutiplication, to_lower_case, to_upper_case, \
-    to_sentence_case
+    to_sentence_case, to_camel_case
 
 
 class AlgebraTestCase(unittest.TestCase):
@@ -41,3 +41,9 @@ class AlgebraTestCase(unittest.TestCase):
         user_input = 'a man from ghana'
         result = to_sentence_case(user_input)
         self.assertEqual(result, 'A Man From Ghana')
+
+    def test_to_camel_case_test(self):
+        user_input = 'buddy come visit me'
+        result = to_camel_case(user_input)
+        self.assertEqual(result,"bUDDYcOMEvISITmE")
+
