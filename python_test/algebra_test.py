@@ -45,5 +45,5 @@ class AlgebraTestCase(unittest.TestCase):
     def test_to_camel_case_test(self):
         user_input = 'buddy come visit me'
         result = to_camel_case(user_input)
-        self.assertEqual(result,"bUDDYcOMEvISITmE")
+        self.assertEqual(result, "bUDDYcOMEvISITmE")
 
